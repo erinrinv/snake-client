@@ -18,6 +18,15 @@ const connect = function () {
     conn.write('Name: EVG');
   });
 
+ // conn.on('connect', () => {
+ //   conn.write('Move: up');
+ // })
+
+
+
+
+
+
   return conn;
 };
 
