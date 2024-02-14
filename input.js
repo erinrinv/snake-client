@@ -2,23 +2,20 @@
 
 let connection;
 
-const handleUserInput = function() {
-  stdin.on('data', (key) => {
-    if (key === '\u0003') {
-      process.exit();
-    }
-  });
-
-  if(key === MOVE_UP_KEY){
+const handleUserInput = function(key) {
+  if (key === '\u0003') {
+    process.exit();
+  }
+  if(key === 'W'){
     connnection.write('Move: up');
   }
-  if(key === MOVE_LEFT_KEY){
+  if(key === 'A'){
     connnection.write('Move: left');
   }
-  if(key === MOVE_DOWN_KEY){
+  if(key === 'S'){
     connnection.write('Move: down');
   }
-  if(key === MOVE_RIGHT_KEY){
+  if(key === 'D'){
     connnection.write('Move: right');
   }
   if (key === '1') {
